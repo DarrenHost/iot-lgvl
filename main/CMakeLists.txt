@@ -4,6 +4,9 @@ file(GLOB_RECURSE LV_DEMOS_SOURCES ${LV_DEMO_DIR}/*.c)
 set(MY_UI_SOURCES
     ui/lv_login_page.c
     ui/lv_sensor_test.c 
+    ui/lv_font_chinese_12.c
+    ui/lv_font_chinese_16.c
+    ui/lv_font_chinese_24.c
 )
 
 idf_component_register(

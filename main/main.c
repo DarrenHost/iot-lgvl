@@ -15,9 +15,7 @@
 #include "lv_sensor_test.h"
 
 
-static lv_sensor_test_t *ui = NULL;
-static int toggle_count = 0;
-static float current_voltage = 0.0f;
+
 
 /* 100ms 定时器回调 */
 void sensor_timer_cb(lv_timer_t *timer) {
@@ -50,7 +48,7 @@ void app_main(void)
         .tear_avoid_mode = ESP_LV_ADAPTER_TEAR_AVOID_MODE_TRIPLE_PARTIAL,
         .touch_flags = {
             .swap_xy = 1,
-            .mirror_x = 0,
+            .mirror_x = 1,
             .mirror_y = 0
         }};
     bsp_display_start_with_config(&cfg);
@@ -66,10 +64,10 @@ void app_main(void)
     //lv_demo_widgets();
 
     /* 创建 UI */
-    ui = lv_sensor_test_create();
+    lv_sensor_test_create();
 
     /* 创建定时器 */
-    lv_timer_create(sensor_timer_cb, 100, NULL);
+    //lv_timer_create(sensor_timer_cb, 100, NULL);
 
     // while (1) {
     //     lv_timer_handler();
