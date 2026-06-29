@@ -363,4 +363,4 @@ MIT License
 
 如有问题请提交 Issue 或联系：
 - GitHub Issues: https://github.com/DarrenHost/iot-lgvl/issues
-- Email: dev@coffeeji.com
+- Email: darren.host@foxmail.com
